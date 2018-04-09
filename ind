@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title><?php echo'Hand made'?></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script></script>
+</head>
+    <body>
+    <header>
+        <h1 id="title_web">Hand made</h1>
+        <ul>
+            <li><a href="www.google.com">example1</a></li>
+            <li><a href="www.google.com">example2</a></li>
+            <li><a href="www.google.com">example3</a></li>
+        </ul>
+        <div id="sign_up_in"><span id="sign_up">sign_up</span><span id="sign_in">sign_in</span></div>
+        <div id="en_ar"><span id="en">EN</span><span id="ar">AR</span></div>
+    </header>
+       <div id="body_content">
+           <form method="post" action="code.php">
+            <div class="group_sign"><label>Username</label><input type="text" name="username" placeholder="username"></div>
+            <div class="group_sign"><label>Password</label><input type="password" name="pass" placeholder="password"></div>
+            <div class="group_sign"><label>Confirm password</label><input type="password" name="conf_pass" placeholder="confirm password"></div>
+            <div class="group_sign"><label>Email</label><input type="text" name="email" placeholder="Email"></div>
+            <div class="group_sign"><input type="submit" name="" value="Sign up"></div>
+       </form>
+        
+    </body>
+</html>

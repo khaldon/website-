@@ -1,0 +1,33 @@
+<?php
+if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['conf_pass']) && isset($_POST['email'])){
+    $user_name = $_POST['username'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    $conf_pass = $_POST['conf_pass'];
+}
+
+if(isset($user_name) && isset($pass) && isset($conf_pass) && isset($email)){
+    $user_name;
+    $conf_pass;
+    $email;
+    $pass;
+}
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "ecom";
+$con= mysqli_connect($servername, $username,$password,$db);
+if($con){
+    echo 'this connection is OK ';
+}
+#$sql = "insert into ecomer (username,password,conf_pass,email) values ('$user_name','$pass','$conf_pass','$email')";
+$result = "SELECT * FROM ecomer ";
+$insert = "INSERT INTO ecomer (username, password) VALUES('amr','abdo')";
+ if(! $con ){echo 'Connected failure<br>';}
+         echo 'Connected successfully<br>';
+         if (mysqli_query($con, $insert)) {
+            echo "Database created successfully".$insert;
+         } else {
+            echo "Error creating database: " . mysqli_error($con);
+         }
+?>
